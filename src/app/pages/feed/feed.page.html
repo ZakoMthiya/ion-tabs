@@ -1,9 +1,16 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>feed</ion-title>
+  <ion-toolbar color="mango">
+    <ion-title>Feed</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <h2> Welcome {{ displayUserData?.name}}</h2>
+  </ion-item>
+
+  <app-feed-update [User]="displayUserData"></app-feed-update>
+
+  <app-feed-card [User]="displayUserData"></app-feed-card>
 
 </ion-content>

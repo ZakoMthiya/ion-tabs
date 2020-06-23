@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="mango">
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,17 +14,17 @@
   <ion-list>
     <ion-item>
       <ion-label position="stacked">Username</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input name="username" type="text" [(ngModel)]="postData.username"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input name="password" type="password" [(ngModel)]="postData.password"></ion-input>
     </ion-item>
     <ion-item lines="none">
       Don't have an account? &nbsp; <a routerLink="/signup">Sign Up</a> &nbsp; here
     </ion-item>
 
-    <ion-button (click)="login()" expand="block" color="success" shape="round">
+    <ion-button (click)="loginAction()" expand="block" color="success" shape="round">
       Login
     </ion-button>
   </ion-list>
